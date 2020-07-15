@@ -1,12 +1,26 @@
 import React from 'react';
 
+import i18next from '../../translate/i18n';
+
+import './styles.css';
+import imgBrazil from '../../assets/images/brazil.svg';
+import imgUnitedStates from '../../assets/images/united-states.svg';
+
 const Home = () => {
+
+    function handleLanguage(language){
+        localStorage.setItem('i18nextLng', language);
+        window.location = window.location;
+    }
+
     return(
         <div>
-            <h1>Aplicação de exemplo</h1>
+            <h1>{i18next.t('title.string')}</h1>
             <p>
-                Esse é um pequeno texto que será convertido para teste de utilização de multi idiomas em aplicações Web.
+                {i18next.t('message.string')}
             </p>
+            <img src={imgBrazil} alt='Bandeira do Brasil' className='flags' onClick={() => handleLanguage('pt-BR')}/>
+            <img src={imgUnitedStates} alt='Bandeira dos EUA' className='flags' onClick={() => handleLanguage('en-US')}/>
         </div>
     );
 }

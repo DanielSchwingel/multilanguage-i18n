@@ -1,7 +1,9 @@
-import {} from './portuguese';
+import messagesPT from './portuguese';
+import messagesEN from './english';
 
 const messages = {
-
+    ...messagesPT,
+    ...messagesEN
 }
 
-module.exports =  messages;
+export default messages;
