@@ -1,5 +1,3 @@
-# multilanguage-i18n
-
 <h1 align = "center">
   Multilanguage-i18n
 </h1>
